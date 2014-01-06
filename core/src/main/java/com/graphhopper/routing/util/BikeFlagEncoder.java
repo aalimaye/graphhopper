@@ -187,30 +187,28 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
 
         long encoded;
         if ((allowed & ferryBit) == 0)
-        {
+        {                        
+            // set speed
+            // FIXME Wait for decision for other weighting than speed
+            int speed;
+            // relationcode == 0 : This happens for e.g. ways with a bus relation
+            if ((relationcode == -1) || (relationcode == 0))
+            {
+                // In case that the way does not belong to a relation:
+                speed=getSpeed(way);
+            }
+            else
+            {
+                // In case that the way belongs to a relation
+                int boostpercent;
+                boostpercent=100 + (relationcode-4)*33;
+                speed=getSpeed(way);
+                if (speed<20) 
+                    speed=20;
+                speed=speed*(boostpercent/100);
+            }
             
-            encoded = speedEncoder.setValue(0, getSpeed(way));
-//            // set speed
-//            // FIXME Wait for decision for other weighting than speed
-//            int speed;
-//            // relationcode == 0 : This happens for e.g. ways with a bus relation
-//            if ((relationcode == -1) || (relationcode == 0))
-//            {
-//                // In case that the way does not belong to a relation:
-//                speed=getSpeed(way);
-//            }
-//            else
-//            {
-//                // In case that the way belongs to a relation
-//                int boostpercent;
-//                boostpercent=100 + (relationcode-4)*33;
-//                speed=getSpeed(way);
-//                if (speed<20) 
-//                    speed=20;
-//                speed=speed*(boostpercent/100);
-//            }
-//            
-//            encoded = speedEncoder.setValue(0, speed);
+            encoded = speedEncoder.setValue(0, speed);
 
             // handle oneways
             if ((way.hasTag("oneway", oneways) || way.hasTag("junction", "roundabout"))
@@ -320,11 +318,16 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
     private static final Map<String, Integer> TRACKTYPE_SPEED = new HashMap<String, Integer>()
     {
         {
-            put("grade1", 25); // paved
-            put("grade2", 20); // now unpaved ...
-            put("grade3", 18);
-            put("grade4", 16);
-            put("grade5", 8); // like sand/grass            
+//            put("grade1", 25); // paved
+//            put("grade2", 20); // now unpaved ...
+//            put("grade3", 18);
+//            put("grade4", 16);
+//            put("grade5", 8); // like sand/grass  
+             put("grade1", 16); // paved
+            put("grade2", 12); // now unpaved ...
+            put("grade3", 12);
+            put("grade4", 10);
+            put("grade5", 8); // like sand/grass   
         }
     };
     
