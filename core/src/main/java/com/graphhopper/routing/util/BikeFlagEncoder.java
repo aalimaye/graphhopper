@@ -329,25 +329,15 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
     private static final Map<String, Integer> SURFACE_SPEED = new HashMap<String, Integer>()
     {   
         {
-//            put("asphalt", 25);
-//            put("concrete", 25);
-//            put("paved", 25);
-//            put("unpaved", 20);
-//            put("gravel", 20);
-//            put("ground", 25);
-//            put("dirt", 20);
-//            put("paving_stones", 20);
-//            put("grass", 25);
-//            put("cobblestone", 6);
-               put("asphalt", 18);
-            put("concrete", 18);
-            put("paved", 16);
-            put("unpaved", 12);
-            put("gravel", 12);
-            put("ground", 12);
-            put("dirt", 10);
-            put("paving_stones", 8);
-            put("grass", 8);
+            put("asphalt", 25);
+            put("concrete", 25);
+            put("paved", 25);
+            put("unpaved", 20);
+            put("gravel", 20);
+            put("ground", 25);
+            put("dirt", 20);
+            put("paving_stones", 20);
+            put("grass", 25);
             put("cobblestone", 6);
         }
     };
@@ -355,25 +345,43 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
     private static final Map<String, Integer> HIGHWAY_SPEED = new HashMap<String, Integer>()
     {
         {
-            put("living_street", 20);
-            put("steps", 4);
+//            put("living_street", 20);
+//            put("steps", 4);
+//
+//            put("cycleway", 25);
+//            put("path", 18);
+//            put("footway", 10);
+//            put("road", 10);
+//            put("track", 25);
+//            put("service", 20);
+//            put("unclassified", 18);
+//            put("residential", 20);
+//
+//            put("trunk", 10);
+//            put("trunk_link", 16);
+//            put("primary", 16);
+//            put("primary_link", 16);
+//            put("secondary", 16);
+//            put("secondary_link", 16);
+//            put("tertiary", 16);
+//            put("tertiary_link", 16);
+             put("living_street", 6);
 
-            put("cycleway", 25);
-            put("path", 18);
-            put("footway", 10);
+            put("cycleway", 14);
+            put("path", 10);
             put("road", 10);
-            put("track", 25);
-            put("service", 20);
-            put("unclassified", 18);
-            put("residential", 20);
+            put("track", 10);
+            put("service", 8);
+            put("unclassified", 14);
+            put("residential", 10);
 
-            put("trunk", 10);
+            put("trunk", 18);
             put("trunk_link", 16);
-            put("primary", 16);
+            put("primary", 18);
             put("primary_link", 16);
-            put("secondary", 16);
+            put("secondary", 18);
             put("secondary_link", 16);
-            put("tertiary", 16);
+            put("tertiary", 18);
             put("tertiary_link", 16);
         }
     };
