@@ -318,31 +318,36 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
     private static final Map<String, Integer> TRACKTYPE_SPEED = new HashMap<String, Integer>()
     {
         {
-//            put("grade1", 25); // paved
-//            put("grade2", 20); // now unpaved ...
-//            put("grade3", 18);
-//            put("grade4", 16);
-//            put("grade5", 8); // like sand/grass  
-             put("grade1", 16); // paved
-            put("grade2", 12); // now unpaved ...
-            put("grade3", 12);
-            put("grade4", 10);
-            put("grade5", 8); // like sand/grass   
+            put("grade1", 25); // paved
+            put("grade2", 20); // now unpaved ...
+            put("grade3", 18);
+            put("grade4", 16);
+            put("grade5", 8); // like sand/grass
         }
     };
     
     private static final Map<String, Integer> SURFACE_SPEED = new HashMap<String, Integer>()
     {   
         {
-            put("asphalt", 25);
-            put("concrete", 25);
-            put("paved", 25);
-            put("unpaved", 20);
-            put("gravel", 20);
-            put("ground", 25);
-            put("dirt", 20);
-            put("paving_stones", 20);
-            put("grass", 25);
+//            put("asphalt", 25);
+//            put("concrete", 25);
+//            put("paved", 25);
+//            put("unpaved", 20);
+//            put("gravel", 20);
+//            put("ground", 25);
+//            put("dirt", 20);
+//            put("paving_stones", 20);
+//            put("grass", 25);
+//            put("cobblestone", 6);
+               put("asphalt", 18);
+            put("concrete", 18);
+            put("paved", 16);
+            put("unpaved", 12);
+            put("gravel", 12);
+            put("ground", 12);
+            put("dirt", 10);
+            put("paving_stones", 8);
+            put("grass", 8);
             put("cobblestone", 6);
         }
     };
