@@ -63,7 +63,6 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
         oppositeLanes.add("opposite_lane");
         oppositeLanes.add("opposite_track");
    
-/*        
         potentialBarriers.add("gate");
         potentialBarriers.add("lift_gate");
         potentialBarriers.add("swing_gate");
@@ -74,7 +73,7 @@ public class BikeFlagEncoder extends AbstractFlagEncoder
         absoluteBarriers.add("kissing_gate");
         absoluteBarriers.add("stile");
         absoluteBarriers.add("turnstile");
-*/
+        
         // very dangerous
         // acceptedRailways.remove("tram");
     }
