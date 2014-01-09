@@ -7,6 +7,4 @@ jdk:
 # do not install anything instead return true via unix command true
 install: true
 script: ./core/files/travis-build.sh
-notifications:
-  email:
-    - manisha@shippable.com
+
