@@ -9,4 +9,4 @@ install: true
 script: ./core/files/travis-build.sh
 notifications:
   email:
-    - github@graphhopper.com
+    - manisha@shippable.com
